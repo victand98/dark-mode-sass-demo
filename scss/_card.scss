@@ -1,0 +1,113 @@
+.top-cards {
+  margin-top: -50px;
+  margin-bottom: 3em;
+}
+
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: $light-grayish-blue;
+  text-align: center;
+  padding: 0.7em 0;
+  position: relative;
+
+  @each $color, $value in $primary-colors {
+    @include card-before("&.#{$color}", $value);
+  }
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $dark-grayish-blue;
+  font-size: 0.9em;
+  font-weight: bold;
+
+  img {
+    margin-right: 5px;
+  }
+}
+
+.card-today {
+  margin-top: 20px;
+  color: $lime-green;
+  font-size: 0.7em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    margin-right: 5px;
+  }
+}
+
+.card-followers {
+  &-number {
+    font-size: 50px;
+    font-weight: 700;
+  }
+
+  &-title {
+    display: block;
+    text-transform: uppercase;
+    color: $dark-grayish-blue;
+    letter-spacing: 5px;
+    font-size: 0.75em;
+  }
+}
+
+.overview {
+  padding-bottom: 2em;
+
+  h2 {
+    color: $dark-grayish-blue;
+  }
+}
+
+.card-small {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 2.5em;
+  background: $light-grayish-blue;
+  border-radius: 8px;
+  padding: 1.7em;
+
+  p {
+    margin: 0;
+  }
+
+  &-views {
+    color: $dark-grayish-blue;
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+
+  &-icon {
+    text-align: right;
+  }
+
+  &-number {
+    font-weight: bold;
+    font-size: 2.7em;
+    line-height: 0.9;
+  }
+
+  &-percentage {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 0.9em;
+    font-weight: bold;
+
+    span {
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      margin-right: 5px;
+    }
+  }
+}

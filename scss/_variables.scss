@@ -1,0 +1,47 @@
+// COLORS //
+
+// Primary
+$white: hsl(0, 0%, 100%);
+$lime-green: hsl(163, 72%, 41%);
+$bright-red: hsl(356, 69%, 56%);
+$twitter: hsl(195, 100%, 50%);
+$facebook: hsl(203, 89%, 53%);
+$instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$youtube: hsl(348, 97%, 39%);
+
+$primary-colors: () !default;
+$primary-colors: map-merge(
+  (
+    "white": $white,
+    "green": $lime-green,
+    "red": $bright-red,
+    "twitter": $twitter,
+    "facebook": $facebook,
+    "instagram": $instagram,
+    "youtube": $youtube,
+  ),
+  $primary-colors
+);
+
+// Dark Theme
+$toggle-dark: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+// light theme
+$toggle-light: hsl(230, 22%, 74%);
+
+// DARK THEME
+// BG
+$very-dark-blue: hsl(230, 17%, 14%);
+// Top BG Pattern
+$very-dark-blue-top-bg: hsl(232, 19%, 15%);
+// Card BG
+$dark-desaturated-blue: hsl(228, 28%, 20%);
+// Text
+$desaturated-blue: hsl(228, 34%, 66%);
+
+// LIGHT THEME
+// Top BG Pattern
+$very-pale-blue: hsl(225, 100%, 98%);
+// Card BG
+$light-grayish-blue: hsl(227, 47%, 96%);
+// Text
+$dark-grayish-blue: hsl(228, 12%, 44%);

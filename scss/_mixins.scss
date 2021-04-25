@@ -1,0 +1,18 @@
+@mixin card-before($parent, $color) {
+  #{$parent}::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 4px;
+    background: $color;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+}
+
+@mixin text-color($parent, $color) {
+  #{$parent} {
+    color: $color;
+  }
+}

@@ -1,0 +1,17 @@
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+.wrapper {
+  padding: 0 30px;
+}
+
+.grid {
+  display: grid;
+  grid-row-gap: 25px;
+}
+
+@each $color, $value in $primary-colors {
+  @include text-color(".text-#{$color}", $value);
+}
