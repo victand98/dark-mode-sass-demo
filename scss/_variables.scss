@@ -45,3 +45,11 @@ $very-pale-blue: hsl(225, 100%, 98%);
 $light-grayish-blue: hsl(227, 47%, 96%);
 // Text
 $dark-grayish-blue: hsl(228, 12%, 44%);
+
+// Breakpoints //
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-xl-min: 1024px;
+
+// Maximum Width //
+$max-width-xl: 1440px;

@@ -1,15 +1,40 @@
 body {
   font-family: "Inter", sans-serif;
   margin: 0;
+  background: $white;
+  color: $very-dark-blue;
+
+  @media (prefers-color-scheme: dark) {
+    background: $very-dark-blue;
+    color: $white;
+  }
 }
 
 .wrapper {
   padding: 0 30px;
+
+  @include xl {
+    max-width: $max-width-xl;
+    margin: auto;
+  }
 }
 
 .grid {
   display: grid;
   grid-row-gap: 25px;
+  grid-column-gap: 25px;
+
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include xl {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 @each $color, $value in $primary-colors {

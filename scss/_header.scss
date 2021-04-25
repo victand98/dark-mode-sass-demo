@@ -16,4 +16,12 @@
     border-bottom: 2px solid $dark-grayish-blue;
     padding-bottom: 1.5em;
   }
+
+  @media (prefers-color-scheme: dark) {
+    background: $very-dark-blue-top-bg;
+
+    &-total {
+      color: $desaturated-blue;
+    }
+  }
 }

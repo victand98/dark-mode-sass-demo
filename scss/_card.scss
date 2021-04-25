@@ -6,7 +6,7 @@
 .card {
   border-radius: 8px;
   overflow: hidden;
-  background-color: $light-grayish-blue;
+  background: $light-grayish-blue;
   text-align: center;
   padding: 0.7em 0;
   position: relative;
@@ -109,5 +109,19 @@
     img {
       margin-right: 5px;
     }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .card,
+  .card-small {
+    background: $dark-desaturated-blue;
+  }
+
+  .card-title,
+  .card-followers-title,
+  .overview h2,
+  .card-small-views {
+    color: $desaturated-blue;
   }
 }
