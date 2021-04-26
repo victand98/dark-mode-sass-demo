@@ -1,0 +1,45 @@
+.dark-mode {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1em;
+}
+
+.switch {
+  height: 40px;
+  width: 80px;
+  display: block;
+  border-radius: 20px;
+  background: $toggle-light;
+  padding: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: $very-pale-blue;
+    border-radius: 50%;
+    transform: translateX(40px);
+    transition: 0.3s;
+    will-change: transform;
+  }
+
+  @include themed() {
+    background: t($switch-bg);
+
+    &::before {
+      background: t($top-bg-pattern);
+    }
+  }
+}
+
+.toggle-mode {
+  display: none;
+
+  &:checked ~ .switch::before {
+    transform: translateX(0);
+  }
+}

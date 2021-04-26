@@ -3,7 +3,11 @@
 
 // mixins
 @import "mixins";
+@import "functions";
+
+// functions
 
 @import "init";
 @import "header";
+@import "switch";
 @import "card";

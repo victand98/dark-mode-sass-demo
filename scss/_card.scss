@@ -6,7 +6,6 @@
 .card {
   border-radius: 8px;
   overflow: hidden;
-  background: $light-grayish-blue;
   text-align: center;
   padding: 0.7em 0;
   position: relative;
@@ -14,18 +13,25 @@
   @each $color, $value in $primary-colors {
     @include card-before("&.#{$color}", $value);
   }
+
+  @include themed() {
+    background: t($card-bg);
+  }
 }
 
 .card-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $dark-grayish-blue;
   font-size: 0.9em;
   font-weight: bold;
 
   img {
     margin-right: 5px;
+  }
+
+  @include themed() {
+    color: t($text-secondary);
   }
 }
 
@@ -52,9 +58,12 @@
   &-title {
     display: block;
     text-transform: uppercase;
-    color: $dark-grayish-blue;
     letter-spacing: 5px;
     font-size: 0.75em;
+
+    @include themed() {
+      color: t($text-secondary);
+    }
   }
 }
 
@@ -62,7 +71,9 @@
   padding-bottom: 2em;
 
   h2 {
-    color: $dark-grayish-blue;
+    @include themed() {
+      color: t($text-secondary);
+    }
   }
 }
 
@@ -70,7 +81,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-row-gap: 2.5em;
-  background: $light-grayish-blue;
   border-radius: 8px;
   padding: 1.7em;
 
@@ -79,9 +89,11 @@
   }
 
   &-views {
-    color: $dark-grayish-blue;
     font-weight: bold;
     font-size: 0.9em;
+    @include themed() {
+      color: t($text-secondary);
+    }
   }
 
   &-icon {
@@ -110,18 +122,8 @@
       margin-right: 5px;
     }
   }
-}
 
-@media (prefers-color-scheme: dark) {
-  .card,
-  .card-small {
-    background: $dark-desaturated-blue;
-  }
-
-  .card-title,
-  .card-followers-title,
-  .overview h2,
-  .card-small-views {
-    color: $desaturated-blue;
+  @include themed() {
+    background: t($card-bg);
   }
 }

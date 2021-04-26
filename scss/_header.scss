@@ -17,11 +17,22 @@
     padding-bottom: 1.5em;
   }
 
-  @media (prefers-color-scheme: dark) {
-    background: $very-dark-blue-top-bg;
+  @include xl {
+    &-grid {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+    }
 
     &-total {
-      color: $desaturated-blue;
+      border: none;
+    }
+  }
+
+  @include themed() {
+    background: t($top-bg-pattern);
+
+    &-total {
+      color: t($text-secondary);
     }
   }
 }

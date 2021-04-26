@@ -1,12 +1,12 @@
 body {
   font-family: "Inter", sans-serif;
   margin: 0;
-  background: $white;
-  color: $very-dark-blue;
+}
 
-  @media (prefers-color-scheme: dark) {
-    background: $very-dark-blue;
-    color: $white;
+.container {
+  @include themed() {
+    background: t($bg);
+    color: t($text);
   }
 }
 
